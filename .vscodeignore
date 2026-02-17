@@ -5,3 +5,4 @@ src
 *.ts
 *.log
 *.map
+*.vsix
