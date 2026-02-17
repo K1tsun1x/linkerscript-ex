@@ -1,0 +1,31 @@
+{
+  "scopeName": "source.linkerscript",
+  "name": "LinkerScript",
+  "patterns": [
+    {
+      "name": "keyword.control.linkerscript",
+      "match": "\\b(ENTRY|OUTPUT_ARCH|OUTPUT_FORMAT|ALIGN|KEEP|PROVIDE|GROUP|AT|ADDR|SIZEOF|SECTIONS|MEMORY|PHDRS|ORIGIN|LENGTH)\\b"
+    },
+    {
+      "name": "keyword.other.linkerscript",
+      "match": "\\b(BYTE|SHORT|LONG|QUAD|SQUAD)\\b"
+    },
+    {
+      "name": "constant.numeric.linkerscript",
+      "match": "\\b(0x[0-9A-Fa-f]+|0[oO]?[0-7]+|0[bB][01]+|\\d+[KMG]?)\\b"
+    },
+    {
+      "name": "string.quoted.linkerscript",
+      "match": "\".*?\""
+    },
+    {
+      "name": "comment.line.double-slash.linkerscript",
+      "match": "//.*$"
+    },
+    {
+      "name": "comment.block.linkerscript",
+      "begin": "/\\*",
+      "end": "\\*/"
+    }
+  ]
+}

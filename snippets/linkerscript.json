@@ -1,0 +1,44 @@
+{
+  "MEMORY block": {
+    "prefix": "mem",
+    "body": [
+      "MEMORY",
+      "{",
+      "  ${1:FLASH} (rx) : ORIGIN = ${2:0x08000000}, LENGTH = ${3:256K}",
+      "}"
+    ],
+    "description": "Insert MEMORY block"
+  },
+  "SECTION block": {
+    "prefix": "sec",
+    "body": [
+      "${1:section_name} : {",
+      "  ${2:section_content}",
+      "}"
+    ],
+    "description": "Insert section"
+  },
+  "SECTIONS block": {
+    "prefix": "secsdef",
+    "body": [
+        "SECTIONS {",
+        "\t.text : {",
+        "\t\t*(.text)",
+        "\t}",
+        "",
+        "\t.data : {",
+        "\t\t*(.data)",
+        "\t}",
+        "",
+        "\t.bss : {",
+        "\t\t*(.bss)",
+        "\t}",
+        "",
+        "\t.rodata : {",
+        "\t\t*(.rodata)",
+        "\t}",
+        "}"
+    ],
+    "description": "Insert SECTIONS block"
+  }
+}
