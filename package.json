@@ -11,6 +11,12 @@
     "Other", "Programming Languages"
   ],
   "main": "./out/extension.js",
+  "keywords": [
+    "linker",
+    "linkerscript",
+    "ld",
+    "GNU ld"
+  ],
   "contributes": {
     "languages": [
       {
