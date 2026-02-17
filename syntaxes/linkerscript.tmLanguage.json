@@ -15,14 +15,6 @@
       "match": "\\b(0x[0-9A-Fa-f]+|0[oO]?[0-7]+|0[bB][01]+|\\d+[KMG]?)\\b"
     },
     {
-      "name": "string.quoted.linkerscript",
-      "match": "\".*?\""
-    },
-    {
-      "name": "comment.line.double-slash.linkerscript",
-      "match": "//.*$"
-    },
-    {
       "name": "comment.block.linkerscript",
       "begin": "/\\*",
       "end": "\\*/"

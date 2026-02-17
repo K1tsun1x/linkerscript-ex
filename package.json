@@ -2,8 +2,8 @@
   "name": "linkerscript-ex",
   "displayName": "LinkerScript?EX",
   "description": "Extension for LinkerScript (.ld)",
-  "version": "0.0.1",
-  "icon": "./images/icon128x128.png",
+  "version": "2026-02-18",
+  "icon": "images/icon128x128.png",
   "engines": {
     "vscode": "^1.109.0"
   },
@@ -11,12 +11,17 @@
     "Other", "Programming Languages"
   ],
   "main": "./out/extension.js",
+  "activationEvents": [],
   "keywords": [
     "linker",
     "linkerscript",
     "ld",
     "GNU ld"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/K1tsun1x/linkerscript-ex.git"
+  },
   "contributes": {
     "languages": [
       {
@@ -24,23 +29,23 @@
         "aliases": ["LinkerScript", "Linker Script", "linker script", "linkerscript", "ld"],
         "extensions": [".ld"],
         "icon": {
-          "light": "./images/icon128x128.png",
-          "dark": "./images/icon128x128.png"
+          "light": "images/icon128x128.png",
+          "dark": "images/icon128x128.png"
         },
-        "configuration": "./language-configuration.json"
+        "configuration": "language-configuration.json"
       }
     ],
     "grammars": [
       {
         "language": "linkerscript",
         "scopeName": "source.linkerscript",
-        "path": "./syntaxes/linkerscript.tmLanguage.json"
+        "path": "syntaxes/linkerscript.tmLanguage.json"
       }
     ],
     "snippets": [
       {
         "language": "linkerscript",
-        "path": "./snippets/linkerscript.json"
+        "path": "snippets/linkerscript.json"
       }
     ]
   },
