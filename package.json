@@ -3,7 +3,7 @@
   "displayName": "LinkerScript?EX",
   "description": "Extension for LinkerScript (.ld)",
   "publisher": "K1tsun1x",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icon": "images/icon128x128.png",
   "engines": {
     "vscode": "^1.109.0"

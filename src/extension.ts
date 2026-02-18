@@ -3,7 +3,8 @@ import * as vscode from 'vscode';
 export function activate(context: vscode.ExtensionContext) {
     const keywords = [
         "ORIGIN",
-        "LENGTH"
+        "LENGTH",
+        "AT"
     ];
 
     const blocks = [
@@ -18,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
         { name: "LONG", insertText: "${1:value}", documentation: "**LONG(...)**\n\nDefine a 32-bit value in the output file" },
         { name: "QUAD", insertText: "${1:value}", documentation: "**QUAD(...)**\n\nDefine a 64-bit value in the output file" },
         { name: "SQUAD", insertText: "${1:value}", documentation: "**SQUAD(...)**\n\nDefine a 128-bit value in the output file" },
-
+        
         { name: "ADDR", insertText: "${1:section}", documentation: "**ADDR(...)**\n\nReturns the address of a section" },
         { name: "SIZEOF", insertText: "${1:section}", documentation: "**SIZEOF(...)**\n\nReturns the size of a section" }
     ];
@@ -31,8 +32,7 @@ export function activate(context: vscode.ExtensionContext) {
         { name: "KEEP", insertText: "(${1:section})", documentation: "**KEEP(...)**\n\nPrevent linker from discarding a section" },
         { name: "PROVIDE", insertText: "(${1:symbol} = ${2:value})", documentation: "**PROVIDE(...)**\n\nDefine a symbol if it is not already defined" },
 
-        { name: "GROUP", insertText: "(${1:file1} ${2:file2})", documentation: "**GROUP(...)**\n\nGroups input files together in memory. The linker will treat these files as a single unit when placing sections" },
-        { name: "AT", insertText: "(${1:address})", documentation: "**AT(...)**\n\nSpecifies the load address of a section or memory region. Overrides the default placement" }
+        { name: "GROUP", insertText: "(${1:file1} ${2:file2})", documentation: "**GROUP(...)**\n\nGroups input files together in memory. The linker will treat these files as a single unit when placing sections" }
     ];
 
     const keywordItems = keywords.map(word => {

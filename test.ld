@@ -1,13 +1,15 @@
-ENTRY(main)
+ENTRY(_entry_point)
 OUTPUT_ARCH(i386)
 OUTPUT_FORMAT(binary)
 SECTIONS {
     . = 0x1000;
-    __BEGIN__ = .;
+    __PTR_BEGIN__ = .;
 
     .hdr ALIGN(512) : {
-        LONG(0xC0DEBA5E);   /* Magic number */
-        LONG(0x55AA55aa);
+        LONG(0xDEADBEEF);                                              /* magic */
+        LONG(__PTR_BEGIN__);                                           /* base address */
+        LONG(((__PTR_END__ - __PTR_BEGIN__ + 511) & ~511) / 512);      /* number of sectors */
+        LONG(_entry_point);                                            /* entry point */
     }
 
     .text ALIGN(512) : {
@@ -26,5 +28,6 @@ SECTIONS {
         *(.rodata)
     }
 
-    __END__ = .;
+    __PTR_END__ = .;
+    /* EOF */
 }

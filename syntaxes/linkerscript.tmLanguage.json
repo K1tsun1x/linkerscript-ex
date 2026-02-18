@@ -4,15 +4,23 @@
   "patterns": [
     {
       "name": "keyword.control.linkerscript",
-      "match": "\\b(ENTRY|OUTPUT_ARCH|OUTPUT_FORMAT|ALIGN|KEEP|PROVIDE|GROUP|AT|ADDR|SIZEOF|SECTIONS|MEMORY|PHDRS|ORIGIN|LENGTH)\\b"
+      "match": "\\b(ENTRY|OUTPUT_ARCH|OUTPUT_FORMAT|ALIGN|KEEP|PROVIDE|GROUP|ADDR|SIZEOF|SECTIONS|MEMORY|PHDRS|ORIGIN|LENGTH|AT)\\b"
     },
     {
       "name": "keyword.other.linkerscript",
       "match": "\\b(BYTE|SHORT|LONG|QUAD|SQUAD)\\b"
     },
     {
+      "name": "variable.parameter.linkerscript",
+      "match": "\\b_+[_A-Za-z0-9]+_+\\b"
+    },
+    {
+      "name": "variable.other.linkerscript",
+      "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
+    },
+    {
       "name": "constant.numeric.linkerscript",
-      "match": "\\b(0x[0-9A-Fa-f]+|0[oO]?[0-7]+|0[bB][01]+|\\d+[KMG]?)\\b"
+      "match": "\\b(0[xX][0-9A-Fa-f]+|0[oO]?[0-7]+|0[bB][01]+|\\d+[KMG]?)\\b"
     },
     {
       "name": "comment.block.linkerscript",
